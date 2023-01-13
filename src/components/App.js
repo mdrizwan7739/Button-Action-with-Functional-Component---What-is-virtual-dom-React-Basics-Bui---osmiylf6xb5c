@@ -5,7 +5,7 @@ const handleClick = () => {
   let a = document.createElement('p');
   a.id = "para";
   a.innerHTML = "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy";
-  return document.getElementById('main').append(a);
+  return document.getElementById('main').appendChild(a);
 }
 
 const App = () => {
