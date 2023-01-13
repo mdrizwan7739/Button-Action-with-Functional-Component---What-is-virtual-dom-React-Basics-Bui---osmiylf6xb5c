@@ -11,7 +11,7 @@ const handleClick = () => {
 const App = () => {
   return (
     <div id="main" >
-      <p id="para"></p>
+     
       <button id="click" onClick={handleClick}>click</button>
     </div >
   )
