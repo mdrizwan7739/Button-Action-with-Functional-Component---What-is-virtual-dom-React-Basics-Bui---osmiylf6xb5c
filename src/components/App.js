@@ -1,22 +1,18 @@
 import React, {Component, useState} from "react";
 import "./../styles/App.css";
 
-const handleClick = () => {
-  let a = document.createElement('p');
-  a.id = "para";
-  a.innerHTML = "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy";
-  document.getElementById('main').appendChild(a);
-}
-
-const App = () => {
+function App() {
+  const [showText, setShowText] = useState(false);
   return (
-    <div id="main" >
-     
-      <button id="click" onClick={handleClick}>click</button>
-    </div >
-  )
-
+    <div id="main">
+      // Do not alter the main div
+      <button id='click' onClick={()=>{
+        setShowText(!showText)
+      }}>Click</button>
+      {showText && (<p id='para'>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>)}
+    </div>
+  );
 }
 
 
-export default App;
+export default App;
